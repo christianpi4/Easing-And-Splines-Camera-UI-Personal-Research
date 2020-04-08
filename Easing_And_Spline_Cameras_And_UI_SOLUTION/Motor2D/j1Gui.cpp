@@ -1,0 +1,135 @@
+#include "p2Defs.h"
+#include "p2Log.h"
+#include "j1App.h"
+#include "j1Render.h"
+#include "j1Textures.h"
+#include "j1Input.h"
+#include "j1Gui.h"
+#include "j1Image.h"
+#include "UI_element.h"
+#include "UI_Button.h"
+#include "..//Brofiler/Brofiler.h"
+
+j1Gui::j1Gui() : j1Module()
+{
+	name.create("gui");
+}
+
+// Destructor
+j1Gui::~j1Gui()
+{}
+
+// Called before render is available
+bool j1Gui::Awake(pugi::xml_node& config)
+{
+	LOG("Loading GUI atlas");
+	bool ret = true;
+	node = config;
+	folder.create(node.child("folder").child_value());
+	UI_file_name = config.child("button").attribute("file1").as_string();
+
+	return ret;
+}
+
+// Called before the first frame
+bool j1Gui::Start()
+{
+	texture = App->tex->Load(PATH(folder.GetString(),UI_file_name.GetString()));
+
+	return true;
+}
+
+// Update all guis
+bool j1Gui::PreUpdate(float dt)
+{
+	BROFILER_CATEGORY("PreUpdate GUI", Profiler::Color::DarkMagenta);
+	return true;
+}
+
+bool j1Gui::Update(float dt) {
+
+	BROFILER_CATEGORY("Update GUI", Profiler::Color::Magenta);
+
+	for (int i = 0; i < ui_element.count(); i++) {
+
+		if (ui_element.At(i) != nullptr) {
+
+			ui_element.At(i)->data->Draw();
+			ui_element.At(i)->data->Update(dt);
+
+		}
+	}
+
+	if (App->input->GetKey(SDL_SCANCODE_F8) == KEY_DOWN) {
+
+		debug_UI = !debug_UI;
+
+	}
+
+	return true;
+}
+
+// Called after all Updates
+bool j1Gui::PostUpdate(float dt)
+{
+	BROFILER_CATEGORY("PostUpdate GUI", Profiler::Color::Maroon);
+
+	return true;
+}
+
+
+// Called before quitting
+bool j1Gui::CleanUp()
+{
+	LOG("Freeing GUI");
+	
+	p2List_item<UI_element*>* element = ui_element.start;
+	
+	while (element != nullptr)
+	{
+		ui_element.del(element);
+		delete element->data;
+		element = element->next;
+	} 
+
+	return true;
+}
+
+bool j1Gui::Delete_Element(UI_element* element) {
+	
+	ui_element.find(element);
+	p2List_item<UI_element*>* item = nullptr;
+	for (item = ui_element.start; item; item = item->next)
+	{
+		if (item->data == element)
+		{
+			ui_element.del(item);
+		}
+	}
+
+	
+	return true;
+}
+
+// const getter for atlas
+SDL_Texture* j1Gui::GetAtlas() const { return texture; }
+
+// class Gui
+
+UI_element* j1Gui::CreateButton(int x, int y, UI_Type type, SDL_Rect idle, SDL_Rect hover, SDL_Rect click, UI_element* parent, j1Module* Observer) {
+	
+	UI_Button* button = new UI_Button(x, y, type, idle, hover, click, parent, Observer);
+
+	ui_element.add(button);
+
+	return button;
+}
+
+UI_element* j1Gui::CreateImage(int x, int y, UI_Type type, SDL_Rect rect, UI_element* parent, j1Module* Observer)
+{
+	j1Image* image = new j1Image(x, y, type, rect, parent, Observer);
+
+	ui_element.add(image);
+
+	return image;
+}

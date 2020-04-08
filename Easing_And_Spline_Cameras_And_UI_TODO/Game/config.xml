@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+	
+  <app framerate_cap="30">
+		<title>NINJA WARRIOR</title>
+		<organization>UPC</organization>
+	</app>
+	
+  <renderer>
+		<vsync value="false" />
+  </renderer>
+
+  	<window>
+		<resolution width="1024" height="768" scale="1" />
+		<fullscreen value="false" />
+		<borderless value="false" />
+		<resizable value="false" />
+		<fullscreen_window value="false" />
+	</window>
+	
+	<file_system>
+		<path>data.zip</path>
+	</file_system>
+
+	<map>
+		<folder>maps/</folder>
+	</map>
+
+  <scene>
+    <map name="Map.tmx" />
+   
+  </scene>
+	
+ 
+  
+  <gui>
+
+    	<folder>gui/</folder>
+	  <button file1="UI_Elements.png"/>	
+   
+  </gui>
+  
+	
+</config>

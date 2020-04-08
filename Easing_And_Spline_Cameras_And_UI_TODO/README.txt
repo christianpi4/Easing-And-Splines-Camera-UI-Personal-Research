@@ -1,4 +1,4 @@
-# Easing-And-Splines-Camera-UI-Personal-Research
+
 Controls:
 Arrows: Move Camera in all directions
 F8: Debug UI
