@@ -16,8 +16,6 @@ j1EasingAndSplines::~j1EasingAndSplines()
 
 SplineInfo::SplineInfo(int* position, const int &final_position, const float &duration, const Spline_Type &t) {
 
-	// TODO 1: Create the constructor
-
 	this->position = position;
 	this->i_pos = *position;
 	this->f_pos = final_position - *position;
@@ -38,10 +36,10 @@ bool SplineInfo::Update(float dt)
 	float time_passed = SDL_GetTicks() - start_time;
 
 
-	//Todo 3: Comprobate if the spline has finished using time_passed, to Update end we need to return false, look line 23 to know how it works
+	//Todo 4: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1
 	if (time_passed < time_to_travel) {
 
-		//Todo 4: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)
+		//Todo 5: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)
 
 		switch (type) {
 
@@ -286,11 +284,14 @@ bool j1EasingAndSplines::Update(float dt)
 {
 	
 	BROFILER_CATEGORY("Update splines", Profiler::Color::DarkKhaki);
+	
+	//Todo 1: Check the easing_splines list and removes those that return false
 
 	for (int i=0; i < easing_splines.size(); i++) {
 		
 		if (easing_splines[i] != nullptr) {
 			
+	
 			if (!easing_splines[i]->Update(dt)) {
 				
 				delete(easing_splines[i]);
@@ -500,5 +501,3 @@ bool j1EasingAndSplines::CleanUp()
 	return true;
 
 }
-
-
