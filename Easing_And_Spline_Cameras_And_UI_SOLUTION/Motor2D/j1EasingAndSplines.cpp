@@ -9,10 +9,7 @@ j1EasingAndSplines::j1EasingAndSplines() : j1Module()
 }
 
 // Destructor
-j1EasingAndSplines::~j1EasingAndSplines()
-{
-
-}
+j1EasingAndSplines::~j1EasingAndSplines(){}
 
 SplineInfo::SplineInfo(int* position, const int &final_position, const float &duration, const Spline_Type &t) {
 
@@ -35,7 +32,6 @@ bool SplineInfo::Update(float dt)
 	//Todo 2: Calculate time since spline start and save the value in FLOAT
 	float time_passed = SDL_GetTicks() - start_time;
 
-
 	//Todo 4: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1
 	if (time_passed < time_to_travel) {
 
@@ -46,149 +42,150 @@ bool SplineInfo::Update(float dt)
 			//LINEAR
 			{
 
-		case Spline_Type::EASE: {
+				case Spline_Type::EASE: {
 
-			*position = ease_function.Ease(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.Ease(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//QUAD
 			{
 
-		case Spline_Type::EASE_IN_QUAD: {
+				case Spline_Type::EASE_IN_QUAD: {
 
-			*position = ease_function.EaseInQuad(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInQuad(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_QUAD: {
+				case Spline_Type::EASE_OUT_QUAD: {
 
-			*position = ease_function.EaseOutQuad(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutQuad(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_QUAD: {
+				case Spline_Type::EASE_IN_OUT_QUAD: {
 
-			*position = ease_function.EaseInOutQuad(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutQuad(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//CUBIC
 			{
 
-		case Spline_Type::EASE_IN_CUBIC: {
+				case Spline_Type::EASE_IN_CUBIC: {
 
-			*position = ease_function.EaseInCubic(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInCubic(time_passed, i_pos, f_pos, time_to_travel);
+					
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_CUBIC: {
+				case Spline_Type::EASE_OUT_CUBIC: {
 
-			*position = ease_function.EaseOutCubic(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutCubic(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_CUBIC: {
+				case Spline_Type::EASE_IN_OUT_CUBIC: {
 
-			*position = ease_function.EaseInOutCubic(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutCubic(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//QUART
 			{
 
-		case Spline_Type::EASE_IN_QUART: {
+				case Spline_Type::EASE_IN_QUART: {
 
-			*position = ease_function.EaseInQuart(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInQuart(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_QUART: {
+				case Spline_Type::EASE_OUT_QUART: {
 
-			*position = ease_function.EaseOutQuart(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutQuart(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_QUART: {
+				case Spline_Type::EASE_IN_OUT_QUART: {
 
-			*position = ease_function.EaseInOutQuart(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutQuart(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//QUINT
 			{
 
-		case Spline_Type::EASE_IN_QUINT: {
+				case Spline_Type::EASE_IN_QUINT: {
 
-			*position = ease_function.EaseInQuint(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInQuint(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_QUINT: {
+				case Spline_Type::EASE_OUT_QUINT: {
 
-			*position = ease_function.EaseOutQuint(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutQuint(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_QUINT: {
+				case Spline_Type::EASE_IN_OUT_QUINT: {
 
-			*position = ease_function.EaseInOutQuint(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutQuint(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//SINE
 			{
 
-		case Spline_Type::EASE_IN_SINE: {
+				case Spline_Type::EASE_IN_SINE: {
 
-			*position = ease_function.EaseInSine(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInSine(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_SINE: {
+				case Spline_Type::EASE_OUT_SINE: {
 
-			*position = ease_function.EaseOutSine(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutSine(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_SINE: {
+				case Spline_Type::EASE_IN_OUT_SINE: {
 
-			*position = ease_function.EaseInOutSine(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutSine(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//EXPO
 			{
 
-		case Spline_Type::EASE_IN_EXPO: {
+				case Spline_Type::EASE_IN_EXPO: {
 
-			*position = ease_function.EaseInExpo(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInExpo(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_EXPO: {
+				case Spline_Type::EASE_OUT_EXPO: {
 
-			*position = ease_function.EaseOutExpo(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutExpo(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_EXPO: {
+				case Spline_Type::EASE_IN_OUT_EXPO: {
 
-			*position = ease_function.EaseInOutExpo(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutExpo(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 
 			}
@@ -196,68 +193,68 @@ bool SplineInfo::Update(float dt)
 			//CIRC
 			{
 
-		case Spline_Type::EASE_IN_CIRC: {
+				case Spline_Type::EASE_IN_CIRC: {
 
-			*position = ease_function.EaseInCirc(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInCirc(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_CIRC: {
+				case Spline_Type::EASE_OUT_CIRC: {
 
-			*position = ease_function.EaseOutCirc(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutCirc(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_CIRC: {
+				case Spline_Type::EASE_IN_OUT_CIRC: {
 
-			*position = ease_function.EaseInOutCirc(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutCirc(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//BOUNCE
 			{
 
-		case Spline_Type::EASE_OUT_BOUNCE: {
+				case Spline_Type::EASE_OUT_BOUNCE: {
 
-			*position = ease_function.EaseOutBounce(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutBounce(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//BACK
 			{
 
-		case Spline_Type::EASE_IN_BACK: {
+				case Spline_Type::EASE_IN_BACK: {
 
-			*position = ease_function.EaseInBack(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInBack(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_OUT_BACK: {
+				case Spline_Type::EASE_OUT_BACK: {
 
-			*position = ease_function.EaseOutBack(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutBack(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
-		case Spline_Type::EASE_IN_OUT_BACK: {
+				case Spline_Type::EASE_IN_OUT_BACK: {
 
-			*position = ease_function.EaseInOutBack(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseInOutBack(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
 			//ELASTIC
 			{
 
-		case Spline_Type::EASE_OUT_ELASTIC: {
+				case Spline_Type::EASE_OUT_ELASTIC: {
 
-			*position = ease_function.EaseOutElastic(time_passed, i_pos, f_pos, time_to_travel);
+					*position = ease_function.EaseOutElastic(time_passed, i_pos, f_pos, time_to_travel);
 
-		} break;
+				} break;
 
 			}
 
@@ -284,14 +281,13 @@ bool j1EasingAndSplines::Update(float dt)
 {
 	
 	BROFILER_CATEGORY("Update splines", Profiler::Color::DarkKhaki);
-	
-	//Todo 1: Check the easing_splines list and removes those that return false
+	//Todo 1: We want to delete spline when it's over. For this we have to:
+	//Check the easing_splines list and removes those that Update return false. This means that Spline has finished.
 
 	for (int i=0; i < easing_splines.size(); i++) {
 		
 		if (easing_splines[i] != nullptr) {
 			
-	
 			if (!easing_splines[i]->Update(dt)) {
 				
 				delete(easing_splines[i]);

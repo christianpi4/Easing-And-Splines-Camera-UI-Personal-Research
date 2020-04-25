@@ -105,116 +105,116 @@ bool j1Scene::Update(float dt)
 	{
 
 		if (App->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE);
+			
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_QUAD);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_QUAD);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_3) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_QUAD);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_QUAD);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_4) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_QUAD);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_QUAD);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_5) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_CUBIC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_CUBIC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_6) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_CUBIC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_CUBIC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_7) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_CUBIC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_CUBIC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_8) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_QUART);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_QUART);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_9) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_QUART);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_QUART);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_0) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_QUART);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_QUART);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_1) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_QUINT);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_QUINT);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_2) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_QUINT);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_QUINT);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_3) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_QUINT);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_QUINT);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_4) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_SINE);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_SINE);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_5) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_SINE);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_SINE);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_6) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_SINE);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_SINE);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_7) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_EXPO);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_EXPO);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_8) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_EXPO);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_EXPO);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_9) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_EXPO);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_EXPO);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_KP_0) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_CIRC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_CIRC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F1) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_CIRC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_CIRC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F2) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_CIRC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_CIRC);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F3) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_BOUNCE);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_BOUNCE);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F4) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_BACK);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_BACK);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F5) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_BACK);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_BACK);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F6) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_IN_OUT_BACK);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_IN_OUT_BACK);
 		}
 
 		if (App->input->GetKey(SDL_SCANCODE_F7) == KEY_DOWN) {
-			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 5000, Spline_Type::EASE_OUT_ELASTIC);
+			App->easing_splines->CreateSpline(&App->render->camera.x, -App->render->camera.x - 6000, 3000, Spline_Type::EASE_OUT_ELASTIC);
 		}
 	
 	}
 	
-
 	App->map->Draw();
 
 	return true;
