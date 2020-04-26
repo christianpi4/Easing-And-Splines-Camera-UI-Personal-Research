@@ -19,13 +19,7 @@ layout: default
  <h2>  <li><h2> References <br/></li></h2>
 </ol>
  
- 
- 
 
- 
-  
-  
-    
 <h1> 1. What is it and Why is it important? </h1>
 When we perform in UI/UX design, or in graphics rendering we sometimes want to animate things over time. For this, what we do is calculate instead of resorting to a complete physical simulation.
 For example, when moving an object from one position to another, fade a screen by changing the alpha.
@@ -36,24 +30,31 @@ For example, when moving an object from one position to another, fade a screen b
 In mathematics it is a piecewise function defined by polynomials. 
 Specifically they are used in programming due to their ease and precision of evaluation.</br><br/>
 
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/CubicHermiteSpline.png?raw=true"></br><br/>
+
 <h1> 3. Spline usability </h1>
 We can use them in camera movement in 2D video games, for example in the Sonic the Hedgehog game, 
-where all the loops and transitions within a level are created through a spline.
-Also in 3D video games it is used to track the character.
+where all the loops and transitions within a level are created through a spline.<br/></br>
+
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/SonicSplineCamera.gif?raw=true"></br><br/>
+
+Also in 3D video games it is used to track the character.<br/></br>
+
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/df1ec3227061d332abd42204ad9ef910.gif?raw=true"></br><br/>
+
 Other uses they may have is in the design of all interface objects that exhibit temporary, ease behavior. 
 Flexibility creates and reinforces the naturalness inherent in the fluidity of user experiences and creates a sense of continuity 
 when objects behave as users expect them to.</br><br/>
 
-<a href="http://wiki.polycount.com/w/images/1/1f/Dota2CharacterArtGuide.pdf">http://wiki.polycount.com/w/images/1/1f/Dota2CharacterArtGuide.pdf</a> <br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/1_NBmptOO9ZTC9bQ-98-mWcg.gif?raw=true"></br><br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/1_HwK2vxdY0vveZdvqoEY_8w.gif?raw=true"></br><br/>
 
 <h1> 4. Easing Functions </h1>
 Before we can do it first we need to know the four values that we will use later.</br>
-Initial Value (i_pos): It is the initial value from which we want to create the animation, if we want to move it it 
-will be the initial position if we want to increase it it will be the scale.</br>
-Final Value (f_pos): It is the final value from which we want to create the animation, if we want to move it it will
-be the initial position if we want to increase it it will be the scale.</br>
-Duration (duration): It is the value of the time which we want the animation to last.</br>
-Total elapsed time (time_passed): This is the total time that has passed since the spline started.</br><br/>
+  - Initial Value (i_pos): It is the initial value from which we want to create the animation, if we want to move it it will be the initial position if we want to increase it it will be the scale.</br>
+  - Final Value (f_pos): It is the final value from which we want to create the animation, if we want to move it it will be the initial position if we want to increase it it will be the scale.</br>
+  - Duration (duration): It is the value of the time which we want the animation to last.</br>
+  - Total elapsed time (time_passed): This is the total time that has passed since the spline started.</br><br/>
 
 <h1> 5. Splines Types </h1>
 We have six types depending on the power that we want to apply, in addition each of them has three different functions except the linear, 
@@ -64,81 +65,81 @@ Ease In-Out: Slow at the beginning and at the end</br><br/>
 
 Linear: Power 1</br></br>
 -EASE:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/1.gif?raw=true">
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/1.gif?raw=true"><br/></br>
 
 Quad: Power 2</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/2.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/2.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/3.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/3.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/4.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/4.gif?raw=true"><br/></br>
 
 Cubic: Power 3</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/5.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/5.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/6.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/6.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/7.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/7.gif?raw=true"><br/></br>
 
 Quart: Power 4</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/8.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/8.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/9.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/9.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/0EASEINOUTQUART.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/0EASEINOUTQUART.gif?raw=true"><br/></br>
 
 Quint: Power 5</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k1.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k1.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k2.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k2.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k3.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k3.gif?raw=true"><br/></br>
 
 Circ: Power 6</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k0EASE-IN-CIRC.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k0EASE-IN-CIRC.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f1.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f1.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f2.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f2.gif?raw=true"><br/></br>
 In addition, others have also been implemented which use other methods.</br></br>
 
 Sine: Using the mathematical methods of sine and cosine</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k4.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k4.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k5.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k5.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k6.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k6.gif?raw=true"><br/></br>
 
 Expo: Exponentially increases and decreases the initial value</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k7.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k7.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k8.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k8.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k9.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/k9.gif?raw=true"><br/></br>
 
 Bounce: Bounces</br></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f3.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f3.gif?raw=true"><br/></br>
 
 
 Back: Back up a little and shoot out</br></br>
 -EASE IN:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f4.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f4.gif?raw=true"><br/></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f5.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f5.gif?raw=true"><br/></br>
 -EASE IN_OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f6.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f6.gif?raw=true"><br/></br>
 
 Elastic: Attempts to imitate the movements of a rope, accelerates and decelerates smoothly.</br></br>
 -EASE OUT:</br></br>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
 
 <h1> 6. References </h1>
 Art bibles: What are they? <br/>
