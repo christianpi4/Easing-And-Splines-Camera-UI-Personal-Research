@@ -148,13 +148,13 @@ Elastic: Attempts to imitate the movements of a rope, accelerates and decelerate
 <h1> 7. Introduction to Code </h1>
 To start I have created a specific module where all splines will be managed.<br/>
 Inside j1EasingAndSplines.h we find an enum called Spline_Type which includes the different types of Splines.<br/><br/>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/enumtype.png?raw=true"><br/></br>
 
 We also find a struct called Ease Functions where all the functions for spline calculations are.<br/><br/>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/structsplineinfo.png?raw=true"><br/></br>
 
 Contains a constructor where all variables are assigned.<br/><br/>
-<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/constrcutor.png?raw=true"><br/></br>
 
 It also contains an update which helps us to update the characteristic of the element we want to modify, in our case the position, in addition it also helps us to identify if the spline has been finished or not.<br/></br>
 <img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
@@ -170,14 +170,22 @@ Finally we have the CreateSpline function which needs four parameters, the initi
 Todo 1: We want to delete spline when it's over. For this we have to:<br/>
 Check the easing_splines list and removes those that Update return false. This means that Spline has finished. <br/><br/>
 <img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+Solution:<br/><br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
 
 Todo 2: Calculate time since spline start and save the value in FLOAT<br/><br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+Solution:<br/><br/>
 <img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
 
 Todo 3: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1<br/><br/>
 <img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+Solution:<br/><br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
 
 Todo 4: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)<br/><br/>
+<img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
+Solution:<br/><br/>
 <img src="https://github.com/christianpi4/Easing-And-Splines-Camera-UI-Personal-Research/blob/gh-pages/images_gif/f7.gif?raw=true"><br/></br>
 
 <h1> 9. References </h1>
