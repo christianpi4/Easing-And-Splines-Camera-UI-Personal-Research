@@ -94,6 +94,7 @@ struct EaseFunctions {
 	int EaseOutElastic(float &time_passed, int &i_pos, int &f_pos, float &duration);
 	
 };
+
 struct SplineInfo {
 
 	SplineInfo(int* position, const int &target_position, const float &duration, const Spline_Type &t);

@@ -9,14 +9,16 @@ j1EasingAndSplines::j1EasingAndSplines() : j1Module()
 }
 
 // Destructor
-j1EasingAndSplines::~j1EasingAndSplines()
-{
-
-}
+j1EasingAndSplines::~j1EasingAndSplines(){}
 
 SplineInfo::SplineInfo(int* position, const int &final_position, const float &duration, const Spline_Type &t) {
 
-	// TODO 1: Create the constructor
+	this->position = position;
+	this->i_pos = *position;
+	this->f_pos = final_position - *position;
+	this->type = t;
+	this->time_to_travel = duration;
+	start_time = SDL_GetTicks();
 
 }
 
@@ -28,12 +30,17 @@ bool SplineInfo::Update(float dt)
 	bool ret = true;
 
 	//Todo 2: Calculate time since spline start and save the value in FLOAT
-
-
-	//Todo 3: Comprobate if the spline has finished using time_passed, to Update end we need to return false, look line 50 to know how it works
 	
+
+	//Todo 3: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1
+	/*if(){
 		//Todo 4: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)
 
+	}
+	else {
+
+
+	}*/
 
 	return ret;
 }
@@ -42,19 +49,9 @@ bool j1EasingAndSplines::Update(float dt)
 {
 	
 	BROFILER_CATEGORY("Update splines", Profiler::Color::DarkKhaki);
+	//Todo 1: We want to delete spline when it's over. For this we have to:
+	//Check the easing_splines list and removes those that Update return false. This means that Spline has finished.
 
-	for (int i=0; i < easing_splines.size(); i++) {
-		
-		if (easing_splines[i] != nullptr) {
-			
-			if (!easing_splines[i]->Update(dt)) {
-				
-				delete(easing_splines[i]);
-				easing_splines[i] = nullptr;
-
-			}
-		}
-	}
 
 	return true;
 
@@ -256,5 +253,3 @@ bool j1EasingAndSplines::CleanUp()
 	return true;
 
 }
-
-
