@@ -55,18 +55,8 @@ bool UI_Button::Update(float dt)
 	//if cursor is inside button rectangle
 	if (IsIntersection() == true) {
 		
-		counter++;
-
 		//rect is button hover
 		dimensions = Button_hover;
-		//LOG("%i", counter);
-
-		if (t == BUTTON && counter2==0) {
-
-			App->easing_splines->CreateSpline(&App->scene->button->pos.x, App->scene->button->pos.x - 200.0f, 1000, Spline_Type::EASE_IN_EXPO);
-			counter2++;
-
-		}
 
 		if (App->input->GetMouseButtonDown(SDL_BUTTON_LEFT) == KEY_DOWN) {
 

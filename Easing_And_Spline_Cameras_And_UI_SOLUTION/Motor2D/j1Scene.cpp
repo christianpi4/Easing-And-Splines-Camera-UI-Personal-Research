@@ -47,6 +47,8 @@ bool j1Scene::Awake(pugi::xml_node& config)
 
 	}
 
+	create = false;
+
 	return true;
 
 }
@@ -232,7 +234,15 @@ bool j1Scene::PostUpdate(float dt)
 	}
 
 	if (App->input->GetKey(SDL_SCANCODE_ESCAPE) == KEY_DOWN) {
-		ret = false;
+		create = !create;
+
+		if(create==true){
+			App->easing_splines->CreateSpline(&App->scene->button->pos.x, App->scene->button->pos.x - 200.0f, 1000, Spline_Type::EASE_OUT_BOUNCE);
+		}
+		else {
+			App->easing_splines->CreateSpline(&App->scene->button->pos.x, App->scene->button->pos.x + 200.0f, 1000, Spline_Type::EASE_OUT_BOUNCE);
+		}
+		
 	}
 
 	return ret;

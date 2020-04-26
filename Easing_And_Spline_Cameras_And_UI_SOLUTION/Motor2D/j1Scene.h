@@ -51,6 +51,7 @@ public:
 
 	UI_Button* button = nullptr;
 	int count = 0;
+	bool create = false;
 
 };
 
