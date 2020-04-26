@@ -32,10 +32,10 @@ bool SplineInfo::Update(float dt)
 	//Todo 2: Calculate time since spline start and save the value in FLOAT
 	float time_passed = SDL_GetTicks() - start_time;
 
-	//Todo 4: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1
+	//Todo 3: Check if the spline has finished using time_passed, to Update end we need to return false, look Todo 1
 	if (time_passed < time_to_travel) {
 
-		//Todo 5: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)
+		//Todo 4: Make a switch for every case of spline and call its function, save the position (select three of one group to do the proof)
 
 		switch (type) {
 
